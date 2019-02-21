@@ -1,0 +1,11 @@
+.logo {
+    color: rgb(68, 202, 199)
+}
+p{
+    font-size: .3in;
+}
+.griddisplay {
+    display: grid;
+    grid-template-columns: auto auto auto  ;
+}
+

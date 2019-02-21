@@ -1,0 +1,33 @@
+<div class="mypanel">
+  <div mat-dialog-title class="header-dialog">
+   <h1>Book At:{{titile}} </h1> 
+  </div >
+  <mat-dialog-content>
+      <div class="form-dialog" >
+          <div class="form-group">
+            <input type="text" [(ngModel)]="full_name" class="form-control" id="InputName"  placeholder="Your Full Name">
+          </div>
+          <div class="form-group">
+            <input type="email" [(ngModel)]="email"  class="form-control" id="InputEmail" placeholder="Your Email Address">
+          </div>
+          <div class="form-group">
+              <input type="phone" [(ngModel)]="mobile_number" class="form-control" id="InputPhone"   placeholder="Your Phone Number">
+            </div>
+            <div class="form-group">
+                      <input class="form-control"  [(ngModel)]="appointment_date" matInput [matDatepicker]="picker"  
+                        placeholder="Select date" 
+                        (focus)="_openCalendar(picker)" 
+                        (click)="_openCalendar(picker)" 
+                        #elementToFocus>
+             <mat-datepicker #picker="matDatepicker"></mat-datepicker>
+            </div>
+            <mat-dialog-actions>
+
+               <button type="submit" (click)="addRequest()" class="btn button-dialog">Book Now</button>
+
+            </mat-dialog-actions>
+          </div>
+    
+  </mat-dialog-content>
+ 
+</div>

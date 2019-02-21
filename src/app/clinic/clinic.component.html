@@ -1,0 +1,10 @@
+<div  class="griddisplay">
+<div  *ngFor="let p of clinics; let i=index;" class="card mb-4 clinic" style="max-width: 17rem;">
+  
+  <img src="assets/img/doctor.jpg" width="271" height="210"/>
+  <div class="info">
+    <p class="nameclinic">{{p.name}}</p>
+   <button class="buttonclass" (click)="openDialog(p.name,p.id)">BOOK</button>
+  </div>
+</div>
+</div>
